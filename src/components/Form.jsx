@@ -2,7 +2,7 @@ function Form() {
     return (
         <main className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
             <div className="max-w-xl lg:max-w-3xl">
-                <a className="block w-[10%] text-blue-600" href="/">
+                {/* <a className="block w-[10%] text-blue-600" href="/">
                     <span className="sr-only">Home</span>
                     <svg
                         className="h-8 sm:h-10"
@@ -15,13 +15,14 @@ function Form() {
                             fill="currentColor"
                         />
                     </svg>
-                </a>
+                </a> */}
 
                 <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
                     Welcome to Online CV Form Creation
                 </h1>
 
                 <form action="#" className="grid grid-cols-6 gap-6 mt-8">
+                    {/* first name */}
                     <div className="col-span-6 sm:col-span-3">
                         <label
                             htmlFor="FirstName"
@@ -37,7 +38,7 @@ function Form() {
                             className="w-full mt-1 text-sm text-gray-700 bg-white border-gray-200 rounded-md shadow-sm"
                         />
                     </div>
-
+                    {/* last name */}
                     <div className="col-span-6 sm:col-span-3">
                         <label
                             htmlFor="LastName"
@@ -53,7 +54,7 @@ function Form() {
                             className="w-full mt-1 text-sm text-gray-700 bg-white border-gray-200 rounded-md shadow-sm"
                         />
                     </div>
-
+                    {/* email */}
                     <div className="col-span-6 sm:col-span-3">
                         <label
                             htmlFor="Email"
@@ -70,7 +71,7 @@ function Form() {
                             className="w-full mt-1 text-sm text-gray-700 bg-white border-gray-200 rounded-md shadow-sm"
                         />
                     </div>
-
+                    {/* phone */}
                     <div className="col-span-6 sm:col-span-3">
                         <label
                             htmlFor="Phone Number"
@@ -87,7 +88,7 @@ function Form() {
                             className="w-full mt-1 text-sm text-gray-700 bg-white border-gray-200 rounded-md shadow-sm"
                         />
                     </div>
-
+                    {/* address */}
                     <div className="col-span-6">
                         <label
                             htmlFor="Address"
