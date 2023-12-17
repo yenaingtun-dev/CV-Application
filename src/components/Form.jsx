@@ -105,6 +105,7 @@ function Form() {
                         />
                     </div>
 
+                    {/* download button */}
                     <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
                         <button className="inline-block px-12 py-3 text-sm font-medium text-white transition bg-blue-600 border border-blue-600 rounded-md shrink-0 hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
                             Download CV
