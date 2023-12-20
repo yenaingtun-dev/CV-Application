@@ -4,10 +4,11 @@ function Form() {
     const [isPersonalActive, setIsPersonalActive] = useState(true);
     const [isEducationActive, setIsEducationActive] = useState(false);
     const [isExperienceActive, setIsExperienceActive] = useState(false);
+    const [isSkillActive, setIsSkillActive] = useState(false);
     return (
         <main className="flex items-center justify-center px-8 sm:px-12 lg:col-span-7 lg:px-16 xl:col-span-6">
             <div className="max-w-xl lg:max-w-3xl">
-                <h1 className="mt-6 text-2xl text-gray-900 font-old sm:text-3xl md:text-4xl">
+                <h1 className="mt-10 text-2xl text-gray-900 font-old sm:text-3xl md:text-4xl">
                     Welcome to Online CV Form Creation
                 </h1>
                 {/* form */}
@@ -316,8 +317,34 @@ function Form() {
                             </div>
                         </>
                     )}
+                    <h3
+                        className="col-span-6 text-xl font-semibold cursor-pointer"
+                        onClick={() => setIsSkillActive(!isSkillActive)}
+                    >
+                        Skill
+                    </h3>
+                    {isSkillActive && (
+                        <>
+                            {/* skills */}
+                            <div className="col-span-6 sm:col-span-3">
+                                <label
+                                    htmlFor="Skill"
+                                    className="block text-sm font-medium text-gray-700"
+                                >
+                                    Skill
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="Skill"
+                                    name="skill"
+                                    className="w-full mt-1 text-sm text-gray-700 bg-white border-gray-200 rounded-md shadow-sm"
+                                />
+                            </div>
+                        </>
+                    )}
                     {/* download button */}
-                    <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
+                    <div className="col-span-6 mb-12 sm:flex sm:items-center sm:gap-4">
                         <button className="inline-block px-12 py-3 text-sm font-medium text-white transition bg-blue-600 border border-blue-600 rounded-md shrink-0 hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
                             Download CV
                         </button>
