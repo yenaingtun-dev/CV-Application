@@ -8,7 +8,7 @@ function Form() {
         <main className="flex items-center justify-center px-8 sm:px-12 lg:col-span-7 lg:px-16 xl:col-span-6">
             <div className="max-w-xl lg:max-w-3xl">
                 <h1 className="mt-6 text-2xl text-gray-900 font-old sm:text-3xl md:text-4xl">
-                    Welcome to Online CV Form  Creation
+                    Welcome to Online CV Form Creation
                 </h1>
                 {/* form */}
                 <form action="#" className="grid grid-cols-6 gap-6 mt-8">
@@ -82,7 +82,22 @@ function Form() {
                                     className="w-full mt-1 text-sm text-gray-700 bg-white border-gray-200 rounded-md shadow-sm"
                                 />
                             </div>
-                            <div className="col-span-6">
+                            <div className="col-span-6 sm:col-span-3">
+                                <label
+                                    htmlFor="Position"
+                                    className="block text-sm font-medium text-gray-700"
+                                >
+                                    Position
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="Position"
+                                    name="position"
+                                    className="w-full mt-1 text-sm text-gray-700 bg-white border-gray-200 rounded-md shadow-sm"
+                                />
+                            </div>
+                            <div className="col-span-6 sm:col-span-3">
                                 <label
                                     htmlFor="Address"
                                     className="block text-sm font-medium text-gray-700"
