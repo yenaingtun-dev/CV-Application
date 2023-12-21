@@ -5,6 +5,12 @@ function Form() {
     const [isEducationActive, setIsEducationActive] = useState(false);
     const [isExperienceActive, setIsExperienceActive] = useState(false);
     const [isSkillActive, setIsSkillActive] = useState(false);
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [position, setPosition] = useState("");
+    const [address, setAddress] = useState("");
     return (
         <main className="flex items-center justify-center px-8 sm:px-12 lg:col-span-7 lg:px-16 xl:col-span-6">
             <div className="max-w-xl lg:max-w-3xl">
@@ -21,6 +27,7 @@ function Form() {
                     </h3>
                     {isPersonalActive && (
                         <>
+                            {/* first name */}
                             <div className="col-span-6 sm:col-span-3">
                                 <label
                                     htmlFor="FirstName"
@@ -32,10 +39,14 @@ function Form() {
                                 <input
                                     type="text"
                                     id="FirstName"
-                                    name="first_name"
+                                    value={firstName}
+                                    onChange={(e) =>
+                                        setFirstName(e.target.value)
+                                    }
                                     className="w-full mt-1 text-sm text-gray-700 bg-white border-gray-200 rounded-md shadow-sm"
                                 />
                             </div>
+                            {/* last name */}
                             <div className="col-span-6 sm:col-span-3">
                                 <label
                                     htmlFor="LastName"
@@ -47,10 +58,14 @@ function Form() {
                                 <input
                                     type="text"
                                     id="LastName"
-                                    name="last_name"
+                                    value={lastName}
+                                    onChange={(e) =>
+                                        setLastName(e.target.value)
+                                    }
                                     className="w-full mt-1 text-sm text-gray-700 bg-white border-gray-200 rounded-md shadow-sm"
                                 />
                             </div>
+                            {/* email */}
                             <div className="col-span-6 sm:col-span-3">
                                 <label
                                     htmlFor="Email"
@@ -63,10 +78,12 @@ function Form() {
                                 <input
                                     type="email"
                                     id="Email"
-                                    name="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     className="w-full mt-1 text-sm text-gray-700 bg-white border-gray-200 rounded-md shadow-sm"
                                 />
                             </div>
+                            {/* phone number */}
                             <div className="col-span-6 sm:col-span-3">
                                 <label
                                     htmlFor="Phone Number"
@@ -79,10 +96,14 @@ function Form() {
                                 <input
                                     type="text"
                                     id="PhoneNumber"
-                                    name="phoneNumber"
+                                    value={phoneNumber}
+                                    onChange={(e) =>
+                                        setPhoneNumber(e.target.value)
+                                    }
                                     className="w-full mt-1 text-sm text-gray-700 bg-white border-gray-200 rounded-md shadow-sm"
                                 />
                             </div>
+                            {/* position */}
                             <div className="col-span-6 sm:col-span-3">
                                 <label
                                     htmlFor="Position"
@@ -94,10 +115,14 @@ function Form() {
                                 <input
                                     type="text"
                                     id="Position"
-                                    name="position"
+                                    value={position}
+                                    onChange={(e) =>
+                                        setPosition(e.target.value)
+                                    }
                                     className="w-full mt-1 text-sm text-gray-700 bg-white border-gray-200 rounded-md shadow-sm"
                                 />
                             </div>
+                            {/* address */}
                             <div className="col-span-6 sm:col-span-3">
                                 <label
                                     htmlFor="Address"
@@ -109,7 +134,8 @@ function Form() {
                                 <input
                                     type="text"
                                     id="Address"
-                                    name="address"
+                                    value={address}
+                                    onChange={(e) => setAddress(e.target.value)}
                                     className="w-full mt-1 text-sm text-gray-700 bg-white border-gray-200 rounded-md shadow-sm"
                                 />
                             </div>
