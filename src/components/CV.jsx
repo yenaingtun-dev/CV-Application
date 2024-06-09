@@ -94,7 +94,7 @@ const CV = () => {
                 <input
                   className="w-full rounded-lg border-gray-200 p-3 text-sm"
                   placeholder="Date of Birth"
-                  type="text"
+                  type="date"
                   id="dateOfBirth"
                   name="dateOfBirth"
                   value={formData.dateOfBirth || ""}
@@ -127,7 +127,7 @@ const CV = () => {
             </div>
           </div>
           {/* card */}
-          <div className="rounded-lg bg-white p-8 space-y-2 shadown-lg lg:col-span-2 lg:py-12">
+          <div className="rounded-lg bg-white p-8 space-y-2 shadow-lg lg:col-span-2 lg:py-12">
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
               <div className="max-w-max">
                 <p className="font-bold">Name:</p>
