@@ -130,27 +130,27 @@ const CV = () => {
           <div className="rounded-lg bg-white p-8 space-y-2 shadow-lg lg:col-span-2 lg:py-12">
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
               <div className="max-w-max">
-                <p className="font-bold">Name:</p>
+                <p className="font-semibold">Name:</p>
                 <p>{formData.firstName} {formData.lastName}</p>
               </div>
               <div className="max-w-max">
-                <p className="font-bold">Email:</p>
+                <p className="font-semibold">Email:</p>
                 <p>{formData.email}</p>
               </div>
             </div>
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
               <div className="max-w-max">
-                <p className="font-bold">Phone:</p>
+                <p className="font-semibold">Phone:</p>
                 <p>{formData.phone}</p>
               </div>
               <div className="max-w-max">
-                <p className="font-bold">DateOfBirth:</p>
+                <p className="font-semibold">DateOfBirth:</p>
                 <p>{formData.dateOfBirth}</p>
               </div>
             </div>
             <div className="grid grid-cols-1 gap-4">
               <div className="max-w-max">
-                <p className="font-bold">Address:</p>
+                <p className="font-semibold">Address:</p>
                 <p>{formData.address}</p>
               </div>
             </div>
