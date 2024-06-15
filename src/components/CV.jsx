@@ -116,43 +116,42 @@ const CV = () => {
                 />
               </div>
             </div>
-
-            <div className="mt-4">
-              <button
-                type="submit"
-                className="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
-              >
-                Download
-              </button>
-            </div>
           </div>
           {/* card */}
           <div className="rounded-lg bg-white p-8 space-y-2 shadow-lg lg:col-span-2 lg:py-12">
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
               <div className="max-w-max">
                 <p className="font-semibold">Name:</p>
-                <p>{formData.firstName} {formData.lastName}</p>
+                <p className="break-words">{formData.firstName} {formData.lastName}</p>
               </div>
               <div className="max-w-max">
                 <p className="font-semibold">Email:</p>
-                <p>{formData.email}</p>
+                <p className="break-words">{formData.email}</p>
               </div>
             </div>
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
               <div className="max-w-max">
                 <p className="font-semibold">Phone:</p>
-                <p>{formData.phone}</p>
+                <p className="break-words">{formData.phone}</p>
               </div>
               <div className="max-w-max">
                 <p className="font-semibold">DateOfBirth:</p>
-                <p>{formData.dateOfBirth}</p>
+                <p className="break-words">{formData.dateOfBirth}</p>
               </div>
             </div>
             <div className="grid grid-cols-1 gap-4">
-              <div className="max-w-max">
+              <div className="max-w-sm wrap">
                 <p className="font-semibold">Address:</p>
-                <p>{formData.address}</p>
+                <p className="break-words">{formData.address}</p>
               </div>
+            </div>
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                className="inline-block w-full  rounded-lg bg-black mt-5 px-3 py-1 font-medium text-white sm:w-auto"
+              >
+                Download
+              </button>
             </div>
           </div>
         </div>
