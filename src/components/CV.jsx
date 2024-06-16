@@ -17,6 +17,9 @@ const CV = () => {
     location: "",
     dateOfEmployment: "",
     jobDescription: "",
+    degree: "",
+    institutionName: "",
+    schoolLocation: "",
   });
 
   const handleInputChange = (e) => {

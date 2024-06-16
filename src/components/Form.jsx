@@ -202,6 +202,71 @@ const Form = ({ formData, setFormData }) => {
           </div>
         </div>
       </div>
+      {/* Education */}
+      <div className="space-y-4">
+        <h3 className="text-xl text-semibold">Education</h3>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div>
+            <label className="sr-only" htmlFor="degree">
+              Degree Obtained
+            </label>
+            <input
+              className="w-full rounded-lg border-gray-200 p-3 text-sm"
+              placeholder="Degree Obtained"
+              type="text"
+              id="degree"
+              name="degree"
+              value={formData.degree || ""}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
+            <label className="sr-only" htmlFor="institutionName">
+              Institution Name
+            </label>
+            <input
+              className="w-full rounded-lg border-gray-200 p-3 text-sm"
+              placeholder="Institution Name"
+              type="text"
+              id="institutionName"
+              name="institutionName"
+              value={formData.institutionName || ""}
+              onChange={handleInputChange}
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div>
+            <label className="sr-only" htmlFor="schoolLocation">
+              Location
+            </label>
+            <input
+              className="w-full rounded-lg border-gray-200 p-3 text-sm"
+              placeholder="Location"
+              type="text"
+              id="schoolLocation"
+              name="schoolLocation"
+              value={formData.schoolLocation || ""}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
+            <label className="sr-only" htmlFor="graduationDate">
+              Graduation Date
+            </label>
+            <input
+              className="w-full rounded-lg border-gray-200 p-3 text-sm"
+              placeholder="Graduation Date"
+              type="date"
+              id="graduationDate"
+              name="graduationDate"
+              value={formData.graduationDate || ""}
+              onChange={handleInputChange}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

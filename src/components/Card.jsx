@@ -32,7 +32,7 @@ const Card = ({ formData }) => {
         </div>
       </div>
       <div className="space-y-2">
-        <h3 className="text-xl font-bold my-5">Experience</h3>
+        <h3 className="text-xl font-bold my-3">Experience</h3>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
           <div className="max-w-max">
             <p className="font-semibold">Job Title:</p>
@@ -57,6 +57,29 @@ const Card = ({ formData }) => {
           <div className="max-w-max">
             <p className="font-semibold">Job Description:</p>
             <p className="break-words">{formData.jobDescription}</p>
+          </div>
+        </div>
+      </div>
+      <div className="space-y-2">
+        <h3 className="text-xl font-bold my-3">Education</h3>
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <div className="max-w-max">
+            <p className="font-semibold">Degree Obtained:</p>
+            <p className="break-words">{formData.degree}</p>
+          </div>
+          <div className="max-w-max">
+            <p className="font-semibold">Institution Name:</p>
+            <p className="break-words">{formData.institutionName}</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <div className="max-w-max">
+            <p className="font-semibold">Location:</p>
+            <p className="break-words">{formData.schoolLocation}</p>
+          </div>
+          <div className="max-w-max">
+            <p className="font-semibold">Graduation Date:</p>
+            <p className="break-words">{formData.graduationDate}</p>
           </div>
         </div>
       </div>
