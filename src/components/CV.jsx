@@ -24,6 +24,9 @@ const CV = () => {
     technicalSkills: "",
     softSkills: "",
     languages: "",
+    projectTitle: "",
+    projectDescription: "",
+    techonologies: "",
   });
 
   const handleInputChange = (e) => {

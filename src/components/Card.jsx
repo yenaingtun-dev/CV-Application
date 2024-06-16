@@ -109,6 +109,28 @@ const Card = ({ formData }) => {
           </div>
         </div>
       </div>
+      {/* projects */}
+      <div className="space-y-2">
+        <h3 className="text-xl font-bold my-3">Projects</h3>
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <div className="max-w-max">
+            <p className="font-semibold">Project Title:</p>
+            <p className="break-words">{formData.projectTitle}</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <div className="max-w-max">
+            <p className="font-semibold">Description:</p>
+            <p className="break-words">{formData.projectDescription}</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <div className="max-w-max">
+            <p className="font-semibold">Technologies:</p>
+            <p className="break-words">{formData.techonologies}</p>
+          </div>
+        </div>
+      </div>
       <div className="flex justify-end">
         <button
           type="submit"

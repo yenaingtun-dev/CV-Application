@@ -292,6 +292,54 @@ const Form = ({ formData, setFormData }) => {
           </div>
         </div>
       </div>
+      {/* projects */}
+      <div className="space-y-4">
+        <h3 className="text-xl text-semibold">Projects</h3>
+        <div className="grid grid-cols-1 space-y-4">
+          <div>
+            <label className="sr-only" htmlFor="projectTitle">
+              Project Title
+            </label>
+            <input
+              className="w-full rounded-lg border-gray-200 p-3 text-sm"
+              placeholder="Project Title"
+              type="text"
+              id="projectTitle"
+              name="projectTitle"
+              value={formData.projectTitle || ""}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
+            <label className="sr-only" htmlFor="projectDescription">
+              Description
+            </label>
+            <input
+              className="w-full rounded-lg border-gray-200 p-3 text-sm"
+              placeholder="Description"
+              type="text"
+              id="projectDescription"
+              name="projectDescription"
+              value={formData.projectDescription || ""}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
+            <label className="sr-only" htmlFor="techonologies">
+              Technologies
+            </label>
+            <input
+              className="w-full rounded-lg border-gray-200 p-3 text-sm"
+              placeholder="Technologies"
+              type="text"
+              id="techonologies"
+              name="techonologies"
+              value={formData.techonologies || ""}
+              onChange={handleInputChange}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
