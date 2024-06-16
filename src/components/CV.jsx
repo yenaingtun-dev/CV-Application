@@ -20,6 +20,10 @@ const CV = () => {
     degree: "",
     institutionName: "",
     schoolLocation: "",
+    graduationDate: "",
+    technicalSkills: "",
+    softSkills: "",
+    languages: "",
   });
 
   const handleInputChange = (e) => {

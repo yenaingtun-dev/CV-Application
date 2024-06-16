@@ -40,9 +40,6 @@ const Form = ({ formData, setFormData }) => {
               onChange={handleInputChange}
             />
           </div>
-        </div>
-
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
             <label className="sr-only" htmlFor="email">
               Email
@@ -72,7 +69,7 @@ const Form = ({ formData, setFormData }) => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1">
           <div>
             <label className="sr-only" htmlFor="dateOfBirth">
               Date Of Birth
@@ -87,20 +84,6 @@ const Form = ({ formData, setFormData }) => {
               onChange={handleInputChange}
             />
           </div>
-          {/* <div>
-                  <label className="sr-only" htmlFor="address">
-                    Address
-                  </label>
-                  <input
-                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                    placeholder="Address"
-                    type="text"
-                    id="address"
-                    name="address"
-                    value={formData.address || ""}
-                    onChange={handleInputChange}
-                  />
-                </div> */}
         </div>
       </div>
       {/* summary */}
@@ -121,7 +104,7 @@ const Form = ({ formData, setFormData }) => {
           />
         </div>
       </div>
-      {/* Work Experience */}
+      {/* work experience */}
       <div className="space-y-4">
         <h3 className="text-xl text-semibold">Work Experience</h3>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -153,9 +136,6 @@ const Form = ({ formData, setFormData }) => {
               onChange={handleInputChange}
             />
           </div>
-        </div>
-
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
             <label className="sr-only" htmlFor="location">
               Location
@@ -202,7 +182,7 @@ const Form = ({ formData, setFormData }) => {
           </div>
         </div>
       </div>
-      {/* Education */}
+      {/* education */}
       <div className="space-y-4">
         <h3 className="text-xl text-semibold">Education</h3>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -234,9 +214,6 @@ const Form = ({ formData, setFormData }) => {
               onChange={handleInputChange}
             />
           </div>
-        </div>
-
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
             <label className="sr-only" htmlFor="schoolLocation">
               Location
@@ -262,6 +239,54 @@ const Form = ({ formData, setFormData }) => {
               id="graduationDate"
               name="graduationDate"
               value={formData.graduationDate || ""}
+              onChange={handleInputChange}
+            />
+          </div>
+        </div>
+      </div>
+      {/* skills */}
+      <div className="space-y-4">
+        <h3 className="text-xl text-semibold">Skills</h3>
+        <div className="grid grid-cols-1 space-y-4">
+          <div>
+            <label className="sr-only" htmlFor="technicalSkills">
+              Technical Skills
+            </label>
+            <input
+              className="w-full rounded-lg border-gray-200 p-3 text-sm"
+              placeholder="Technical Skills"
+              type="text"
+              id="technicalSkills"
+              name="technicalSkills"
+              value={formData.technicalSkills || ""}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
+            <label className="sr-only" htmlFor="softSkills">
+              Soft Skills
+            </label>
+            <input
+              className="w-full rounded-lg border-gray-200 p-3 text-sm"
+              placeholder="Soft Skills"
+              type="text"
+              id="softSkills"
+              name="softSkills"
+              value={formData.softSkills || ""}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
+            <label className="sr-only" htmlFor="languages">
+              Languages
+            </label>
+            <input
+              className="w-full rounded-lg border-gray-200 p-3 text-sm"
+              placeholder="Languages"
+              type="text"
+              id="languages"
+              name="languages"
+              value={formData.languages || ""}
               onChange={handleInputChange}
             />
           </div>
