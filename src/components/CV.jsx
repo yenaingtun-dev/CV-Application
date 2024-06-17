@@ -29,6 +29,9 @@ const CV = () => {
     techonologies: "",
   });
 
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [previewUrl, setPreviewUrl] = useState(null);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -39,9 +42,9 @@ const CV = () => {
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-5">
           {/* form */}
-          <Form  formData={formData} setFormData={setFormData}  />
+          <Form  formData={formData} setFormData={setFormData} previewUrl={previewUrl} setPreviewUrl={setPreviewUrl}  selectedImage={selectedImage} setSelectedImage={setSelectedImage} />
           {/* card */}
-          <Card formData={formData} />
+          <Card formData={formData} previewUrl={previewUrl} />
         </div>
       </div>
     </section>

@@ -1,8 +1,29 @@
 import React from "react";
 
-const Card = ({ formData }) => {
+const Card = ({ formData, previewUrl }) => {
   return (
     <div className="rounded-lg bg-white p-8 space-y-2 shadow-lg lg:col-span-2 lg:py-12">
+      {/* image */}
+      <div className="flex mb-3">
+        <div className="shrink-0">
+          {previewUrl ? (
+            <img
+              id="preview_img"
+              className="h-20 w-20 object-cover rounded-full"
+              src={previewUrl}
+              alt="Current profile photo"
+            />
+          ) : (
+            <img
+              id="preview_img"
+              className="h-20 w-20 object-cover rounded-full"
+              src="https://yoonskin.com.mm/default_image.png"
+              alt="Current profile photo"
+            />
+          )}
+        </div>
+      </div>
+      {/* contact information */}
       <div className="space-y-2">
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
           <div className="max-w-max">

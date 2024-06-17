@@ -1,6 +1,25 @@
 import React from "react";
 
-const Form = ({ formData, setFormData }) => {
+const Form = ({
+  formData,
+  setFormData,
+  selectedImage,
+  setSelectedImage,
+  previewUrl,
+  setPreviewUrl,
+}) => {
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setSelectedImage(file);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setPreviewUrl(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -8,6 +27,36 @@ const Form = ({ formData, setFormData }) => {
 
   return (
     <div className="rounded-lg bg-white p-8 shadow-lg space-y-4 lg:col-span-3 lg:p-12">
+      {/* image */}
+      <div className="flex items-center space-x-6">
+        <div className="shrink-0">
+          {previewUrl ? (
+            <img
+              id="preview_img"
+              className="h-16 w-16 object-cover rounded-full"
+              src={previewUrl}
+              alt="Current profile photo"
+            />
+          ) : (
+            <img
+              id="preview_img"
+              className="h-16 w-16 object-cover rounded-full"
+              src="https://yoonskin.com.mm/default_image.png"
+              alt="Current profile photo"
+            />
+          )}
+        </div>
+        <label className="block">
+          <span className="sr-only">Choose profile photo</span>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            className="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold
+                      file:bg-gray-50 file:text-gray-700 hover:file:bg-gray-100 hover:cursor-pointer"
+          />
+        </label>
+      </div>
       {/* contact info */}
       <div className="space-y-4">
         <h3 className="text-xl text-semibold">Contact Information</h3>
