@@ -30,7 +30,7 @@ const CV = () => {
   });
 
   const [selectedImage, setSelectedImage] = useState(null);
-  const [previewUrl, setPreviewUrl] = useState(null);
+  const [previewUrl, setPreviewUrl] = useState('https://yoonskin.com.mm/default_image.png');
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

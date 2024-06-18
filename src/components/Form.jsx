@@ -30,18 +30,11 @@ const Form = ({
       {/* image */}
       <div className="flex items-center space-x-6">
         <div className="shrink-0">
-          {previewUrl ? (
+          {previewUrl && (
             <img
               id="preview_img"
               className="h-16 w-16 object-cover rounded-full"
               src={previewUrl}
-              alt="Current profile photo"
-            />
-          ) : (
-            <img
-              id="preview_img"
-              className="h-16 w-16 object-cover rounded-full"
-              src="https://yoonskin.com.mm/default_image.png"
               alt="Current profile photo"
             />
           )}
