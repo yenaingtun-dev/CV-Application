@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ formData, previewUrl }) => {
   return (
-    <div className="rounded-lg bg-white p-8 space-y-2 shadow-lg lg:col-span-2 lg:py-12">
+    <div className="rounded-lg bg-white p-8 space-y-5 shadow-lg lg:col-span-2 lg:py-12">
       {/* image */}
       <div className="flex mb-3">
         <div className="shrink-0">
