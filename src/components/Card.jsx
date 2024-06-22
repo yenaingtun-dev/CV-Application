@@ -39,7 +39,7 @@ const Card = ({ formData, previewUrl }) => {
         </div>
       </div>
       <div id="cv-card">
-        {/* contact information */}
+        {/* contact information  */}
         <div className="space-y-2">
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
             <div className="max-w-max">
